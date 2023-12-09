@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: green-horizon
+  name: khazna-app
+  labels:
+    service: khazna-app
+spec:
+  type: LoadBalancer
+  selector:
+    app: khazna-app
+  ports:
+  - port: 80           
+    targetPort: 3000

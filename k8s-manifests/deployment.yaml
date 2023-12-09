@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: green-horizon
+  name: khazna-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: khazna-app
+  template:
+    metadata:
+      labels:
+        app: khazna-app
+    spec:
+      containers:
+      - name: khazna-app
+        image: alberkaram94/khazna-app:latest
