@@ -4,3 +4,5 @@ resource "helm_release" "redis" {
   chart           = "bitnami/redis"
   namespace       = "green-horizon"
 }
+
+# redis password = 1Clf7ahWz5
